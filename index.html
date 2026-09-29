@@ -813,7 +813,7 @@ function hidePop(cv){ const p = $('.pop', cv.layer); if (p) p.hidden = true; }
 
 /* ---------- Page 2: evidence map ---------- */
 const EW = {OUT_W:290, TAG_W:270, TAG_CX:520, BR_X:686, MERGE_X:740, OC_X:790, OC_W:300, TAG2_CX:1300, BUS_X:1510, GOAL_X:1580, GOAL_W:270, COL:340, GAP:26, BAND_MAX:1440};
-const EV = {open:{0:'o1.1'}, goalOpen:false, collapsed:new Set(UNPLACED.map(id => 'st:u:' + id)), sel:null};
+const EV = {open:{}, goalOpen:false, collapsed:new Set(UNPLACED.map(id => 'st:u:' + id)), sel:null};
 const isOpen = key => key === 'goal' ? EV.goalOpen : EV.open[KEYS[key].lane] === key;
 
 function evTagHTML(key){
